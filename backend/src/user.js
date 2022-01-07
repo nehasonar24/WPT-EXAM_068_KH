@@ -20,7 +20,7 @@ let addUser = async (user) => {
 let selectAllmassages = async () => {
   const connection = mysql.createConnection(dbinfo);
   await connection.connectAsync();
-  let sql = `select * from users order by desc`;
+  let sql = `select * from users `;
   let list = await connection.queryAsync(sql, []);
   console.log("data showed");
   await connection.endAsync();
